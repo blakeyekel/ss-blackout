@@ -6,7 +6,7 @@ description 'Death Screen Transition'
 version '1.0.0'
 
 client_scripts {
-    'blackout.lua',
+    'ss-blackout.lua',
 }
 
 
