@@ -1,0 +1,19 @@
+local isDead = false
+
+Citizen.CreateThread(function()
+    while true do
+        Citizen.Wait(0)
+        if IsEntityDead(PlayerPedId()) and not isDead then
+            isDead = true
+            
+            DoScreenFadeOut(0) -- Fade out immediately
+            
+            Citizen.Wait(10000) -- Wait for 10 seconds
+            
+            DoScreenFadeIn(5000) -- Fade in over 5 seconds
+            
+            isDead = false
+        end
+    end
+end)
+
